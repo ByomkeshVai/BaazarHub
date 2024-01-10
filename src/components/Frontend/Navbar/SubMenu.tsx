@@ -3,23 +3,23 @@ import React from "react";
 const SubMenu = () => {
   return (
     <>
-      <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full  text-sm py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700 rounded-md ">
+      <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-2 sm:py-0 dark:bg-gray-800 dark:border-gray-700 rounded-md ">
         <nav
-          className="relative  flex flex-wrap basis-full w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 items-center max-w-screen-2xl mx-auto"
+          className="relative flex flex-wrap basis-full w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 items-center max-w-screen-2xl "
           aria-label="Global"
         >
-          <div className="flex items-center justify-between items-center">
-            <div className="ps-3 sm:ps-6 sm:ms-6  sm:border-gray-300 dark:border-gray-700 mr-5 ">
-              <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+          <div className="flex items-center justify-between">
+            <div className="  sm:border-gray-300 dark:border-gray-700 mr-5 ">
+              <div className="flex flex-col gap-y-4 gap-x-0  sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
                 <a
-                  className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500 lg:flex"
+                  className="font-medium text-blue-600  sm:px-0 dark:text-blue-500 lg:flex"
                   href="#"
                   aria-current="page"
                 >
                   Become A Seller
                 </a>
                 <a
-                  className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500 lg:flex  hidden"
+                  className="font-medium text-blue-600 px-6 sm:px-0 dark:text-blue-500 lg:flex hidden"
                   href="#"
                   aria-current="page"
                 >
