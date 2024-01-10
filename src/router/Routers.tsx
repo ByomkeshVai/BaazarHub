@@ -1,11 +1,14 @@
 import React, { Suspense } from "react";
-import { Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Preloader from "../components/Shared/Preloader/Preloader";
+import Home from "../pages/layout/Frontend/Home/Home";
 
 const Routers = () => {
   return (
     <Suspense fallback={<Preloader />}>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Suspense>
   );
 };
