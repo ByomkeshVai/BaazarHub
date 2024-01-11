@@ -1,8 +1,7 @@
-import React from "react";
 import HeroSidebar from "./HeroSideBar/HeroSidebar";
 import HeroSlider from "./HeroSlider/HeroSlider";
-import HeroPromotion from "./HeroPromotion/HeroPromotion";
 import HeroBanner from "./HeroBanner/HeroBanner";
+import HeroCard from "./HeroCard/HeroCart";
 
 const Hero = () => {
   return (
@@ -12,6 +11,7 @@ const Hero = () => {
         <HeroSlider />
       </div>
       <HeroBanner />
+      <HeroCard />
     </>
   );
 };
