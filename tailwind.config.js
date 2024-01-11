@@ -8,6 +8,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/primereact/**/*.{js,ts,jsx,tsx}",
     "./node_modules/preline/dist/*.js",
+    "./node_modules/flowbite-react/lib/esm/**/*.js",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,5 +17,5 @@ export default {
     extend: {},
   },
   // eslint-disable-next-line no-undef
-  plugins: [require("preline/plugin")],
+  plugins: [require("preline/plugin", "flowbite/plugin")],
 };
