@@ -27,9 +27,9 @@ const FlashSale = () => {
             <Swiper
               breakpoints={{
                 320: { slidesPerView: 1, spaceBetween: 5 },
-                480: { slidesPerView: 1, spaceBetween: 5 },
-                768: { slidesPerView: 3, spaceBetween: 5 },
-                1024: { slidesPerView: 4, spaceBetween: 5 },
+                480: { slidesPerView: 2, spaceBetween: 5 },
+                768: { slidesPerView: 5, spaceBetween: 5 },
+                1024: { slidesPerView: 6, spaceBetween: 5 },
               }}
               autoplay={{
                 delay: 3000,

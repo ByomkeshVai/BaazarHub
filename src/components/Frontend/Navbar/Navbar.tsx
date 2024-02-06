@@ -1,27 +1,26 @@
-import React from "react";
 import SubMenu from "./SubMenu";
 
 const Navbar = () => {
   return (
     <div>
       <SubMenu />
-      <header className=" z-50 text-sm lg:py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700 rounded-md bg-red-500 ">
+      <header className="z-50 text-sm bg-red-500 rounded-md lg:py-3 sm:py-0 dark:bg-gray-800 dark:border-gray-700">
         <nav
-          className=" py-3 shadow-md mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-2xl "
+          className="px-4 py-3 mx-auto shadow-md sm:px-6 lg:px-8 max-w-screen-2xl"
           aria-label="Global"
         >
-          <div className="flex lg:items-center justify-between lg:flex-nowrap flex-wrap w-full">
+          <div className="flex flex-wrap justify-between w-full lg:items-center lg:flex-nowrap">
             <div className="flex items-center justify-between ">
-              <div className="  sm:border-gray-300 dark:border-gray-700 lg:mr-5 ">
+              <div className=" sm:border-gray-300 dark:border-gray-700 lg:mr-5">
                 <button
                   type="button"
-                  className="w-10 h-10 flex justify-center items-center text-sm mr-3 lg:mr-0 font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 "
+                  className="flex items-center justify-center w-10 h-10 mr-3 text-sm font-semibold text-gray-800 border border-gray-200 rounded-lg lg:mr-0 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 "
                   data-hs-overlay="#navbar-secondary-content"
                   aria-controls="navbar-secondary-content"
                   aria-label="Toggle navigation"
                 >
                   <svg
-                    className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4 "
+                    className="flex-shrink-0 w-4 h-4 hs-collapse-open:hidden "
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
@@ -37,7 +36,7 @@ const Navbar = () => {
                     <line x1="3" x2="21" y1="18" y2="18" />
                   </svg>
                   <svg
-                    className="hs-collapse-open:block hidden flex-shrink-0 w-4 h-4"
+                    className="flex-shrink-0 hidden w-4 h-4 hs-collapse-open:block"
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
@@ -63,7 +62,7 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <div className="flex items-center justify-center lg:mt-0 mt-5 lg:order-1 order-3 w-full">
+            <div className="flex items-center justify-center order-3 w-full mt-5 lg:mt-0 lg:order-1">
               <div className="flex rounded-lg shadow-sm ">
                 <input
                   type="text"
@@ -77,7 +76,7 @@ const Navbar = () => {
                   className="w-[2.875rem] h-[2.875rem] flex-shrink-0 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-e-md border border-transparent bg-red-400 text-white hover:bg-red-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                 >
                   <svg
-                    className="flex-shrink-0 h-4 w-4"
+                    className="flex-shrink-0 w-4 h-4"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -95,16 +94,16 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center lg:gap-8 gap-5 lg:order-3 order-1">
+            <div className="flex items-center justify-center order-1 gap-5 lg:gap-8 lg:order-3">
               <div className="">
                 <span
-                  className="pi pi-shopping-bag  border-2 p-2 rounded-full "
+                  className="p-2 border-2 rounded-full pi pi-shopping-bag "
                   style={{ fontSize: "1rem" }}
                 ></span>
               </div>
               <div>
                 <span
-                  className="pi pi-user  border-2 p-2 rounded-full"
+                  className="p-2 border-2 rounded-full pi pi-user"
                   style={{ fontSize: "1rem" }}
                 ></span>
               </div>
@@ -117,13 +116,13 @@ const Navbar = () => {
         className="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-e dark:bg-gray-800 dark:border-gray-700"
         tabindex="-1"
       >
-        <div className="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+        <div className="flex items-center justify-between px-4 py-3 border-b dark:border-gray-700">
           <h3 className="font-bold text-gray-800 dark:text-white">
             Offcanvas title
           </h3>
           <button
             type="button"
-            className="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-lg text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+            className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-sm text-gray-500 rounded-lg hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
             data-hs-overlay="#navbar-secondary-content"
           >
             <span className="sr-only">Close offcanvas</span>

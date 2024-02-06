@@ -1,25 +1,23 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const SubMenu = () => {
   return (
     <>
-      <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-2 sm:py-0 dark:bg-gray-800 dark:border-gray-700 rounded-md ">
+      <header className="z-50 flex flex-wrap w-full py-2 text-sm rounded-md sm:justify-start sm:flex-nowrap sm:py-0 dark:bg-gray-800 dark:border-gray-700 ">
         <nav
-          className="relative flex flex-wrap basis-full w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 items-center max-w-screen-2xl "
+          className="relative flex flex-wrap items-center w-full px-4 mx-auto basis-full sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 max-w-screen-2xl "
           aria-label="Global"
         >
           <div className="flex items-center justify-between">
-            <div className="  sm:border-gray-300 dark:border-gray-700 mr-5 ">
-              <div className="flex flex-col gap-y-4 gap-x-0  sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+            <div className="mr-5 sm:border-gray-300 dark:border-gray-700">
+              <div className="flex flex-col gap-y-4 gap-x-0 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+                <Link to={"/vendor-registration"}>
+                  <button className="font-medium text-blue-600 sm:px-0 dark:text-blue-500 lg:flex">
+                    Become A Seller
+                  </button>
+                </Link>
                 <a
-                  className="font-medium text-blue-600  sm:px-0 dark:text-blue-500 lg:flex"
-                  href="#"
-                  aria-current="page"
-                >
-                  Become A Seller
-                </a>
-                <a
-                  className="font-medium text-blue-600 px-6 sm:px-0 dark:text-blue-500 lg:flex hidden"
+                  className="hidden px-6 font-medium text-blue-600 sm:px-0 dark:text-blue-500 lg:flex"
                   href="#"
                   aria-current="page"
                 >
@@ -32,14 +30,14 @@ const SubMenu = () => {
             <div className="sm:hidden">
               <button
                 type="button"
-                className="p-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-xs dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+                className="inline-flex items-center justify-center gap-2 p-2 text-xs font-medium text-gray-700 align-middle transition-all bg-white border rounded-lg shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
                 data-hs-overlay="#navbar-offcanvas-example"
                 aria-controls="navbar-offcanvas-example"
                 aria-label="Toggle navigation"
               >
                 Menu
                 <svg
-                  className="hs-overlay-open:hidden w-4 h-4"
+                  className="w-4 h-4 hs-overlay-open:hidden"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -64,44 +62,44 @@ const SubMenu = () => {
             tabindex="-1"
             data-hs-overlay-close-on-resize
           >
-            <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+            <div className="flex flex-col mt-5 gap-y-4 gap-x-0 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500"
                 href="#"
                 aria-current="page"
               >
                 Landing
               </a>
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500"
                 href="#"
                 aria-current="page"
               >
                 Landing
               </a>
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500"
                 href="#"
                 aria-current="page"
               >
                 Landing
               </a>
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500"
                 href="#"
                 aria-current="page"
               >
                 Landing
               </a>
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500 lg:hidden"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500 lg:hidden"
                 href="#"
                 aria-current="page"
               >
                 Become A Seller
               </a>
               <a
-                className="font-medium text-blue-600 px-6 sm:py-6 sm:px-0 dark:text-blue-500 lg:hidden"
+                className="px-6 font-medium text-blue-600 sm:py-6 sm:px-0 dark:text-blue-500 lg:hidden"
                 href="#"
                 aria-current="page"
               >
