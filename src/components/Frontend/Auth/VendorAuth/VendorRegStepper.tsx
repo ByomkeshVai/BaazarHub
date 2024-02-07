@@ -1,10 +1,8 @@
 import { Stepper as MTStepper, Step } from "@material-tailwind/react";
-import { useAppDispatch, useAppSelector } from "../../../../redux/hook";
-import { setActiveStep } from "../../../../redux/features/stepperSlice/stepperSlice";
+import { useAppSelector } from "../../../../redux/hook";
 
 const VendorRegStepper = ({ steps }) => {
   const { activeStep } = useAppSelector((state) => state.stepper);
-  const dispatch = useAppDispatch();
   return (
     <div className="w-full px-8 py-4">
       <MTStepper placeholder={""} activeStep={activeStep}>
