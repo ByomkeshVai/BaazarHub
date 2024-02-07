@@ -39,7 +39,7 @@ const VendorRegTab = () => {
     },
   ];
   return (
-    <MTTabs value={"quiz-list"} ref={React.createRef()}>
+    <MTTabs value={"add-vendor"}>
       <TabsHeader placeholder={""}>
         {data.map(({ label, value, icon }) => (
           <Tab placeholder={""} key={value} value={value}>
@@ -49,7 +49,6 @@ const VendorRegTab = () => {
             </div>
           </Tab>
         ))}
-        {/* set current tab from tabValue and data combines*/}
       </TabsHeader>
       <TabsBody placeholder={""}>
         {data.map(({ value, desc }) => (

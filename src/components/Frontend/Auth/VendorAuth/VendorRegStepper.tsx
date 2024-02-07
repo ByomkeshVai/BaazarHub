@@ -13,7 +13,7 @@ const VendorRegStepper = ({ steps }) => {
             placeholder={""}
             key={value}
             className="px-4 cursor-pointer w-fit"
-            onClick={() => dispatch(setActiveStep(value))}
+            // onClick={() => dispatch(setActiveStep(value))}
           >
             {name}
           </Step>
