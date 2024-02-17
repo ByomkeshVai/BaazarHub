@@ -1,14 +1,22 @@
-import { Controller, FieldValues, SubmitHandler } from "react-hook-form";
+import { FieldValues, SubmitHandler } from "react-hook-form";
 import PHForm from "../../../form/PHForm";
 import PHInput from "../../../form/PHInput";
-import { Button, Input, Typography } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import PHSelect from "../../../form/PHSelect";
 import { genderOptions } from "../../../../constant/constant";
+import PHUploadForm from "../../../form/PHUploadForm";
+import { useState } from "react";
 
 const VendorRegistration = () => {
+  const [vendorImage, setVendorImage] = useState("");
+  const [profileImage, setProfileImage] = useState("");
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     const vendorData = {
-      vendor: data,
+      vendor: {
+        ...data,
+        profileImg: profileImage,
+        vendorImg: setVendorImage,
+      },
     };
     console.log(vendorData);
   };
@@ -26,22 +34,10 @@ const VendorRegistration = () => {
             <PHInput type="text" name="name.lastName" label="Last Name" />
           </div>
           <div>
-            <Controller
-              name="vendorImg"
-              render={({ field: { onChange, value, ...field } }) => (
-                <>
-                  <Typography placeholder="" variant="h6" className="mb-1">
-                    Vendor Image
-                  </Typography>
-                  <Input
-                    crossOrigin={true}
-                    type="file"
-                    value={value?.fileName}
-                    {...field}
-                    onChange={(e) => onChange(e.target.files?.[0])}
-                  />
-                </>
-              )}
+            <PHUploadForm
+              imageUrl={vendorImage}
+              setImageUrl={setVendorImage}
+              // isSuccess={isSuccess}
             />
           </div>
           <div>
@@ -51,22 +47,10 @@ const VendorRegistration = () => {
             <PHInput type="string" name="dateOfBirth" label="Date of birth" />
           </div>
           <div>
-            <Controller
-              name="shopImg"
-              render={({ field: { onChange, value, ...field } }) => (
-                <>
-                  <Typography placeholder="" variant="h6" className="mb-1">
-                    Shop Image
-                  </Typography>
-                  <Input
-                    crossOrigin={true}
-                    type="file"
-                    value={value?.fileName}
-                    {...field}
-                    onChange={(e) => onChange(e.target.files?.[0])}
-                  />
-                </>
-              )}
+            <PHUploadForm
+              imageUrl={profileImage}
+              setImageUrl={setProfileImage}
+              // isSuccess={isSuccess}
             />
           </div>
         </div>
