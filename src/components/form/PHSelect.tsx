@@ -1,14 +1,20 @@
-import { Option, Select } from "@material-tailwind/react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Option, Select, Typography } from "@material-tailwind/react";
 import { Controller } from "react-hook-form";
 
 type PHSelectProps = {
-  label: string;
+  labels: string;
   name: string;
   options: { value: string; label: string; disabled?: boolean }[] | undefined;
   disabled?: boolean;
 };
 
-const PHSelect = ({ label, name, options, disabled }: PHSelectProps) => {
+const PHSelect = ({ labels, name, options, disabled }: PHSelectProps) => {
+  const itemData = options?.map((item: any) => (
+    <Option key={item?.id} value={item?.value}>
+      {item?.label}
+    </Option>
+  ));
   return (
     <Controller
       rules={{
@@ -17,16 +23,18 @@ const PHSelect = ({ label, name, options, disabled }: PHSelectProps) => {
       name={name}
       render={({ field, fieldState: { error } }) => (
         <>
+          <Typography placeholder="" variant="h6" className="mb-1">
+            {labels}
+          </Typography>
           <Select
+            key={name}
             placeholder={""}
-            label={label}
+            label={`Select ${name}`}
             {...field}
             style={{ width: "100%" }}
             disabled={disabled}
           >
-            {options?.map((option) => (
-              <Option>{option?.value}</Option>
-            ))}
+            {itemData ? itemData : ""}
           </Select>
           {error && <small style={{ color: "red" }}>{error.message}</small>}
         </>
