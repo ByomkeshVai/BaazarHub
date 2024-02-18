@@ -6,24 +6,35 @@ import PHSelect from "../../../form/PHSelect";
 import { genderOptions } from "../../../../constant/constant";
 import PHUploadForm from "../../../form/PHUploadForm";
 import { useState } from "react";
+import { useVendorRegistrationMutation } from "../../../../redux/features/vendor/vendorApi";
+import { useNavigate } from "react-router-dom";
 
 const VendorRegistration = () => {
+  const navigate = useNavigate();
+  const [vendorReg, { isSuccess }] = useVendorRegistrationMutation();
   const [vendorImage, setVendorImage] = useState("");
   const [profileImage, setProfileImage] = useState("");
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     const vendorData = {
       vendor: {
         ...data,
-        profileImg: profileImage,
-        vendorImg: setVendorImage,
+        shopImg: profileImage,
+        vendorImg: vendorImage,
       },
     };
-    console.log(vendorData);
+
+    vendorReg(vendorData);
+    if (isSuccess) {
+      navigate("/vendor/register-complete");
+    }
   };
   return (
-    <PHForm onSubmit={onSubmit}>
+    <PHForm onSubmit={onSubmit} isSuccess={isSuccess}>
       <div className="grid grid-cols-3 gap-5 mx-auto">
         <div>
+          <div>
+            <PHInput type="text" name="username" label="Username" />
+          </div>
           <div>
             <PHInput type="text" name="name.firstName" label="First Name" />
           </div>
@@ -35,9 +46,10 @@ const VendorRegistration = () => {
           </div>
           <div>
             <PHUploadForm
+              labels={"Vendor Image"}
               imageUrl={vendorImage}
               setImageUrl={setVendorImage}
-              // isSuccess={isSuccess}
+              isSuccess={isSuccess}
             />
           </div>
           <div>
@@ -48,9 +60,10 @@ const VendorRegistration = () => {
           </div>
           <div>
             <PHUploadForm
+              labels={"Shop Logo"}
               imageUrl={profileImage}
               setImageUrl={setProfileImage}
-              // isSuccess={isSuccess}
+              isSuccess={isSuccess}
             />
           </div>
         </div>

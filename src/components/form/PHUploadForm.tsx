@@ -10,6 +10,7 @@ type CWUploadProps = {
   setImageUrl: (url: string) => void;
   imageUrl: string;
   isSuccess?: boolean;
+  labels?: string;
 };
 
 type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
@@ -26,7 +27,12 @@ const beforeUpload = (file: FileType) => {
   return isJpgOrPng && isLt2M;
 };
 
-const PHUploadForm = ({ imageUrl, setImageUrl, isSuccess }: CWUploadProps) => {
+const PHUploadForm = ({
+  imageUrl,
+  setImageUrl,
+  isSuccess,
+  labels,
+}: CWUploadProps) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -52,7 +58,7 @@ const PHUploadForm = ({ imageUrl, setImageUrl, isSuccess }: CWUploadProps) => {
   return (
     <>
       <>
-        <label className="font-semibold text-md">Image Upload</label>
+        <label className="font-semibold text-md">{labels}</label>
         <Upload
           name="avatar"
           listType="picture-card"

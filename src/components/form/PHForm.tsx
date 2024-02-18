@@ -16,6 +16,7 @@ type TFormConfig = {
 type TFormProps = {
   onSubmit: SubmitHandler<FieldValues>;
   children: ReactNode;
+  isSuccess: boolean;
 } & TFormConfig;
 
 const PHForm = ({
@@ -23,6 +24,7 @@ const PHForm = ({
   children,
   defaultValues,
   resolver,
+  isSuccess,
 }: TFormProps) => {
   const formConfig: TFormConfig = {};
   if (defaultValues) {
@@ -36,7 +38,9 @@ const PHForm = ({
 
   const submit: SubmitHandler<FieldValues> = (data) => {
     onSubmit(data);
-    method.reset();
+    if (isSuccess) {
+      method.reset();
+    }
   };
   return (
     <FormProvider {...method}>
